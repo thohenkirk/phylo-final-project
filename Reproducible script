@@ -1,0 +1,24 @@
+Alignment of Data
+
+Chosen algorithm: ClustalW
+
+Assumptions:
+
+	•	The sequences are homologous (evolutionarily related)
+	•	Independence of residues within the column and between columns of an alignment.
+
+Limitations:
+
+	•	Local minimum problem
+	•	Choice of alignment parameters
+	•	No removal of existing gaps from an already aligned sequence set. 
+
+Script: 
+
+% conda install -c bioconda clustalw
+
+% cd Patho563 
+
+% grep “>” Lamiaceae.fasta
+
+% clustalw2 -ALIGN -INFILE=Lamiaceae.fasta -OUTFILE=Lamiaceae-aligned.fasta
