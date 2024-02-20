@@ -1,0 +1,31 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Alignment of Data\
+\
+Chosen algorithm: ClustalW\
+\
+Assumptions:\
+\
+	\'95	The sequences are homologous (evolutionarily related)\
+	\'95	Independence of residues within the column and between columns of an alignment.\
+\
+Limitations:\
+\
+	\'95	Local minimum problem\
+	\'95	Choice of alignment parameters\
+	\'95	No removal of existing gaps from an already aligned sequence set. \
+\
+Script: \
+\
+% conda install -c bioconda clustalw\
+\
+% cd Patho563 \
+\
+% grep \'93>\'94 Lamiaceae.fasta\
+\
+% clustalw2 -ALIGN -INFILE=Lamiaceae.fasta -OUTFILE=Lamiaceae-aligned.fasta}
