@@ -1,0 +1,65 @@
+
+—> Distance 
+
+
+install.packages("adegenet", dep=TRUE)
+install.packages("phangorn", dep=TRUE)
+
+library(ape)
+library(adegenet)
+library(phangorn)
+
+dna <- fasta2DNAbin(Lamiaceae.fasta) 
+
+D <- dist.dna(dna, model="TN93")
+
+tre <- nj(D)
+tre <- ladderize(tre)
+
+plot(tre, cex=.6)
+title("A simple NJ tree")
+
+
+Description: uses pairwise genetic distances between taxa to construct a tree. 
+
+Assumptions: chosen distance metric reflects differences between taxa. 
+
+Limitations: may not find the optimum (‘best tree’); not as robust; prone to inaccuracies and dependent on algorithm chosen.  
+
+
+
+
+
+
+
+—> Parsimony 
+
+
+dna2 <- as.phyDat(dna)
+
+tre.ini <- nj(dist.dna(dna,model="raw"))
+parsimony(tre.ini, dna2)
+
+tre.pars <- optim.parsimony(tre.ini, dna2)
+
+
+plot(tre.pars, cex=0.6)
+
+
+Description: searches for the tree with the smallest number of overall genetic changes between the taxa. 
+
+Assumptions: independence among characters. 
+
+Limitations: can produce inconsistent trees; inaccurate when substantial evolution occurs. 
+
+
+
+
+
+
+
+
+
+
+
+
