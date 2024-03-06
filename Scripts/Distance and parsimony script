@@ -24,7 +24,7 @@ Description: uses pairwise genetic distances between taxa to construct a tree.
 
 Assumptions: chosen distance metric reflects differences between taxa. 
 
-Limitations: may not find the optimum (‘best tree’); not as robust; prone to inaccuracies and dependent on algorithm chosen.  
+Limitations: may not find the optimum (‘best tree’); not as robust; prone to inaccuracies and dependent on chosen algorithm.  
 
 
 
