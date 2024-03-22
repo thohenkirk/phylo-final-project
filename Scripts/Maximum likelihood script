@@ -1,0 +1,14 @@
+IQ-tree 
+
+Description: fast and effective stochastic algorithm to infer phylogenetic trees by maximum likelihood 
+
+Assumptions: requires a set number of sequences for DNA and AA alignments; Set alignment length; proportion of gaps/unknown characters must be less or equal than 70%. 
+
+Limitations: longer CPU times compared to RAxML 
+
+
+
+cd/Downloads/Path563/iqtree-1.6.12-Mac0SX
+bin/iqtree -s Lamiaceae-align.fasta 
+
+*Open trees with FigTree v1.4.4
