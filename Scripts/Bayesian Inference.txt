@@ -1,0 +1,38 @@
+Installation of Homebrew
+
+% /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
+% (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/thalia/.zprofile
+% eval "$(/opt/homebrew/bin/brew shellenv)"
+% brew tap brewsci/bio
+% brew reinstall mrbayes
+
+Creating a Nexus file with MEGA Software
+
+
+MrBayes 
+% cd Downloads/Path563
+
+
+*Creating a mrbayes block (mbblock.txt)
+begin mrbayes;
+ set autoclose=yes;
+ prset brlenspr=unconstrained:exp(10.0);
+ prset shapepr=exp(1.0);
+ prset tratiopr=beta(1.0,1.0);
+ prset statefreqpr=dirichlet(1.0,1.0,1.0,1.0);
+ lset nst=1 rates=gamma;
+ mcmcp ngen=1000000 samplefreq=100 printfreq=100 nruns=2 nchains=4 savebrlens=yes;
+ outgroup Abies grandis;
+ mcmc;
+ sumt;
+end;
+
+
+% cat Lamiaceae.nex mbblock.txt > Lamiaceae-mb.nex
+% mb Lamiaceae-mb.nex 
+
+
+
+Analyze MrBayes output with Tracer 
+
+
