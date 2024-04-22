@@ -1,0 +1,28 @@
+Install Astral
+
+- Download zip file and place contents into a folder of your choice 
+
+
+Test Installation
+
+%  cd Downloads/Path563/Astral
+% java -jar astral.5.7.8.jar -i test_data/song_primates.424.gene.tre
+
+
+Run with Toy data 
+
+% java -jar astral.5.7.8.jar -i test_data/song_mammals.424.gene.tre -o test_data/song_mammals1.tre
+
+*Visualize tree with FigTree v1.4.4
+
+
+
+
+
+
+Description: software used to reconstruct species tree from a given set of gene trees. 
+
+Assumptions: all gene trees are binary; presence of gene independent of gene tree topology; correct branch arrangement
+
+Limitations: constrained search space 
+
