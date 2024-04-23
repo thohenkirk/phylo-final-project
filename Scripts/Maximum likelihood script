@@ -7,6 +7,7 @@ Assumptions: requires a set number of sequences for DNA and AA alignments; Set a
 Limitations: longer CPU times compared to RAxML 
 
 
+Download zipped folder iqtree-1.6.12-Mac0SX and place in designated folder (Path563)
 
 cd/Downloads/Path563/iqtree-1.6.12-Mac0SX
 bin/iqtree -s Lamiaceae-align.fasta 
