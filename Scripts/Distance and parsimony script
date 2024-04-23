@@ -9,7 +9,7 @@ library(ape)
 library(adegenet)
 library(phangorn)
 
-dna <- fasta2DNAbin(Lamiaceae.fasta) 
+dna <- fasta2DNAbin("Lamiaceae.fasta") 
 
 D <- dist.dna(dna, model="TN93")
 
